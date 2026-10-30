@@ -114,3 +114,20 @@ footer a { color: var(--ink2); }
 .legal p, .legal li { color: var(--ink2); }
 
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+/* Sleep plan timeline in the phone */
+.tl { list-style: none; margin: 4px 0 0; padding: 0; display: grid; gap: 8px; }
+.tl li { display: grid; grid-template-columns: 12px 1fr auto; gap: 10px; align-items: start; background: var(--surface); border-radius: 16px; padding: 10px 12px; }
+.tl .dot { width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; }
+.tl small { display: block; color: var(--muted); font-size: 11px; }
+.tl b { display: block; font-size: 14px; font-weight: 700; }
+.tl span { font: 300 18px/1.2 var(--display); font-variant-numeric: tabular-nums; }
+.tl em { font-style: normal; font-weight: 800; font-size: 13px; }
+
+/* How it works: a real sequence, so numbered */
+.steps { counter-reset: s; list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+@media (max-width: 900px) { .steps { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .steps { grid-template-columns: 1fr; } }
+.steps li { counter-increment: s; background: var(--surface); border-radius: 22px; padding: 22px; color: var(--ink2); font-size: 16px; }
+.steps li::before { content: counter(s); display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 10px; background: var(--accent-soft); color: var(--accent); font-weight: 800; margin-bottom: 12px; }
+.steps b { display: block; color: var(--ink); font: 700 19px/1.25 var(--display); margin-bottom: 6px; }

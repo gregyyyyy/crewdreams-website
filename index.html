@@ -4,15 +4,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>CrewDreams</title>
-<meta name="title-en" content="CrewDreams – inflight rest and sleep planning for airline crews">
-<meta name="title-de" content="CrewDreams – Inflight Rest und Schlafplanung für Airline-Crews">
-<meta name="description" content="CrewDreams reads your roster, knows whether you have the first, middle or last inflight rest, and splits the rest for your crew in seconds. Sleep planning for every trip is coming next.">
+<meta name="title-en" content="CrewDreams – sleep planning for airline crews">
+<meta name="title-de" content="CrewDreams – Schlafplanung für Airline-Crews">
+<meta name="description" content="CrewDreams reads your crew roster and builds a sleep plan for every trip: before duty, on board, on layover and back home – rested where it matters to you.">
 <meta name="theme-color" content="#0d0f22">
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta property="og:title" content="CrewDreams">
-<meta property="og:description" content="Inflight rest and sleep planning for airline crews.">
+<meta property="og:description" content="A sleep plan for every trip, for airline crews.">
 <meta property="og:image" content="https://crewdreams.com/assets/icon-512.png">
 <meta property="og:url" content="https://crewdreams.com/">
 <link rel="stylesheet" href="assets/site.css">
@@ -25,8 +25,8 @@
   <div class="wrap">
     <a class="brand" href="#top"><img src="apple-touch-icon.png" alt="" width="30" height="30"><span>Crew<b>Dreams</b></span></a>
     <nav class="nav-links">
+      <a href="#how"><span lang="en">How it works</span><span lang="de">So geht’s</span></a>
       <a href="#features"><span lang="en">Features</span><span lang="de">Funktionen</span></a>
-      <a href="#rest"><span lang="en">W, X, V</span><span lang="de">W, X, V</span></a>
       <a href="#privacy"><span lang="en">Privacy</span><span lang="de">Datenschutz</span></a>
       <a href="#support">Support</a>
     </nav>
@@ -42,10 +42,10 @@
 <section class="hero">
   <div class="wrap grid">
     <div>
-      <h1><span lang="en">Rest well.<br><span class="soft">Fly rested.</span></span><span lang="de">Gut ruhen.<br><span class="soft">Ausgeruht fliegen.</span></span></h1>
+      <h1><span lang="en">Rested where<br><span class="soft">it matters to you.</span></span><span lang="de">Ausgeruht, wo es<br><span class="soft">dir wichtig ist.</span></span></h1>
       <p class="lead">
-        <span lang="en">CrewDreams reads your roster, knows whether you have the first, middle or last rest on board, and splits the inflight rest for your crew in seconds. A personal sleep plan for every trip is next.</span>
-        <span lang="de">CrewDreams liest deinen Dienstplan, weiß, ob du an Bord die erste, mittlere oder letzte Pause hast, und teilt die Inflight-Pausen für deine Crew in Sekunden auf. Als Nächstes kommt ein persönlicher Schlafplan für jede Rotation.</span>
+        <span lang="en">CrewDreams reads your roster and builds a sleep plan for every trip: when to sleep at home before duty, how to use your rest on board, when to sleep on layover and how to get back into your rhythm at home.</span>
+        <span lang="de">CrewDreams liest deinen Dienstplan und macht für jede Rotation einen Schlafplan: wann du vor dem Dienst zu Hause schläfst, wie du deine Pause an Bord nutzt, wann du im Layover schläfst und wie du zu Hause wieder in deinen Rhythmus kommst.</span>
       </p>
       <div class="stores">
         <span class="store"><b>App Store</b> <span lang="en">coming soon</span><span lang="de">bald verfügbar</span></span>
@@ -53,79 +53,79 @@
       </div>
     </div>
 
-    <div class="phone" role="img" aria-label="CrewDreams rest calculator: take-off 07:12, landing 18:39 UTC. W 07:12 to 11:26, X 11:41 to 14:55, V 15:10 to 18:19.">
+    <div class="phone" role="img" aria-label="CrewDreams sleep plan for a Hong Kong trip: nap before duty, rest on board, sleep on layover, first night home.">
       <div class="screen" aria-hidden="true">
-        <h3>Inflight Rest</h3>
-        <div class="sub">V, last rest &nbsp;✈ 11h27</div>
-        <div class="times">
-          <div><small>Take-off</small><strong>07:12</strong></div>
-          <div class="on"><small>Landing est.</small><strong>18:39</strong></div>
-        </div>
-        <div class="card">
-          <div class="band">
-            <span class="W" style="flex:254;opacity:.45">W</span><span class="gap" style="flex:15"></span>
-            <span class="X" style="flex:194;opacity:.45">X</span><span class="gap" style="flex:15"></span>
-            <span class="V" style="flex:189">V</span><span class="gap" style="flex:20"></span>
-          </div>
-          <div class="rows">
-            <div class="head"><span>Rest</span><span>Start</span><span>End</span><span>Length</span><span>Effective</span></div>
-            <div><span><i class="pos W">W</i></span><span>07:12</span><span>11:26</span><span>4h29</span><span class="eff cW">3h59</span></div>
-            <div><span><i class="pos X">X</i></span><span>11:41</span><span>14:55</span><span>3h29</span><span class="eff cX">3h14</span></div>
-            <div class="mine"><span><i class="pos V">V</i></span><span>15:10</span><span>18:19</span><span>3h29</span><span class="eff cV">3h09</span></div>
-          </div>
-        </div>
-        <div class="keys">
-          <span>7</span><span>8</span><span>9</span><span class="fn">AC</span>
-          <span>4</span><span>5</span><span>6</span><span class="fn">C</span>
-          <span>1</span><span>2</span><span>3</span><span>0</span>
-          <span class="calc">CALC</span>
-        </div>
+        <h3>Hong Kong</h3>
+        <div class="sub">Tue 3.11. – Sat 7.11. · LX138 / LX139</div>
+        <ol class="tl">
+          <li><i class="dot X"></i><div><small>Tue · at home</small><b>Nap before duty</b><span>17:35–19:05</span></div><em class="cX">1h30</em></li>
+          <li><i class="dot W"></i><div><small>LX138 · on board, UTC</small><b>Your rest · W</b><span>21:45–02:03</span></div><em class="cW">4h03</em></li>
+          <li><i class="dot W"></i><div><small>Thu · Hong Kong time</small><b>Sleep on layover</b><span>22:30–06:30</span></div><em class="cW">8h00</em></li>
+          <li><i class="dot V"></i><div><small>LX139 · on board, UTC</small><b>Your rest · V</b><span>00:55–04:40</span></div><em class="cV">3h45</em></li>
+          <li><i class="dot X"></i><div><small>Sat · at home</small><b>Short sleep, then stay up</b><span>07:55–09:25</span></div><em class="cX">1h30</em></li>
+        </ol>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2><span lang="en">A plan for every trip.</span><span lang="de">Ein Plan für jede Rotation.</span></h2>
+    <p class="intro">
+      <span lang="en">Built by a long-haul pilot for the crews he flies with.</span>
+      <span lang="de">Gebaut von einem Langstreckenpiloten für die Crews, mit denen er fliegt.</span>
+    </p>
+    <ol class="steps">
+      <li><b lang="en">Connect your roster</b><b lang="de">Dienstplan verbinden</b>
+        <span lang="en">Add your crew calendar link once. CrewDreams reads your flights and your rest position on board.</span>
+        <span lang="de">Einmal den Link deines Crew-Kalenders eintragen. CrewDreams liest deine Flüge und deine Pausen-Position an Bord.</span></li>
+      <li><b lang="en">Tell it how you sleep</b><b lang="de">Sagen, wie du schläfst</b>
+        <span lang="en">A few taps: early bird or night owl, naps, commuting, layover rhythm, and what matters most to you.</span>
+        <span lang="de">Ein paar Mal tippen: Frühmensch oder Spättyp, Nickerchen, Pendeln, Layover-Rhythmus und was dir am wichtigsten ist.</span></li>
+      <li><b lang="en">Follow your sleep plan</b><b lang="de">Dem Schlafplan folgen</b>
+        <span lang="en">From the night before duty to your first night back home, with times in home time, local time and UTC on board.</span>
+        <span lang="de">Von der Nacht vor dem Dienst bis zur ersten Nacht zu Hause, mit Zeiten in Heimatzeit, Ortszeit und UTC an Bord.</span></li>
+      <li><b lang="en">Say how rested you were</b><b lang="de">Sagen, wie ausgeruht du warst</b>
+        <span lang="en">One tap after each trip. If you keep coming back tired, your next plans give you more sleep.</span>
+        <span lang="de">Ein Tipp nach jeder Rotation. Kommst du öfter müde zurück, planen deine nächsten Pläne mehr Schlaf ein.</span></li>
+    </ol>
+  </div>
+</section>
+
+<section id="priority">
+  <div class="wrap">
+    <h2><span lang="en">You decide what rested means.</span><span lang="de">Du entscheidest, was ausgeruht heißt.</span></h2>
+    <p class="intro">
+      <span lang="en">Not everyone wants the same from a trip. Your plan is built around your choice.</span>
+      <span lang="de">Nicht jeder will von einer Rotation dasselbe. Dein Plan richtet sich nach deiner Wahl.</span>
+    </p>
+    <div class="feat">
+      <article><h3><span lang="en">For the flight</span><span lang="de">Für den Flug</span></h3>
+        <p><span lang="en">Naps before duty and before the flight back, so you start every flight fresh.</span><span lang="de">Nickerchen vor dem Dienst und vor dem Rückflug, damit du jeden Flug frisch beginnst.</span></p></article>
+      <article><h3><span lang="en">On layover</span><span lang="de">Im Layover</span></h3>
+        <p><span lang="en">Sleep on local time and have your days free to explore with the crew.</span><span lang="de">Nach Ortszeit schlafen und die Tage frei haben, um mit der Crew etwas zu unternehmen.</span></p></article>
+      <article><h3><span lang="en">Back home fast</span><span lang="de">Schnell wieder zu Hause</span></h3>
+        <p><span lang="en">Stay close to home time on layover, so you are back to normal soon after landing.</span><span lang="de">Im Layover nah an der Heimatzeit bleiben, damit du nach der Landung schnell wieder im Alltag bist.</span></p></article>
     </div>
   </div>
 </section>
 
 <section id="features">
   <div class="wrap">
-    <h2><span lang="en">Made for long-haul nights.</span><span lang="de">Gemacht für Langstrecken-Nächte.</span></h2>
-    <p class="intro">
-      <span lang="en">Built by a long-haul pilot for the crews he flies with. Dark by design, so it does not wake you up when you check it in the bunk.</span>
-      <span lang="de">Gebaut von einem Langstreckenpiloten für die Crews, mit denen er fliegt. Dunkel gestaltet, damit sie dich in der Koje nicht aufweckt.</span>
-    </p>
+    <h2><span lang="en">Also on board.</span><span lang="de">Außerdem dabei.</span></h2>
     <div class="feat">
-      <article>
-        <span class="tag"><span lang="en">Available</span><span lang="de">Verfügbar</span></span>
-        <h3><span lang="en">Rest calculator</span><span lang="de">Pausenrechner</span></h3>
-        <p><span lang="en">Take-off and estimated landing in UTC, and the three rests appear with start, end, length and effective rest. Wake-up time per position is up to you.</span><span lang="de">Take-off und geschätzte Landung in UTC eingeben, und die drei Pausen erscheinen mit Start, Ende, Länge und effektiver Ruhezeit. Die Weckzeit pro Position stellst du selbst ein.</span></p>
-      </article>
-      <article>
-        <span class="tag"><span lang="en">Available</span><span lang="de">Verfügbar</span></span>
-        <h3><span lang="en">Your roster, read for you</span><span lang="de">Dein Plan, automatisch gelesen</span></h3>
-        <p><span lang="en">Connect your crew calendar once. CrewDreams shows every rotation with your rest position and the expected rest window, and updates it whenever you open the app.</span><span lang="de">Verbinde deinen Crew-Kalender einmal. CrewDreams zeigt jede Rotation mit deiner Pausen-Position und dem erwarteten Pausenfenster und aktualisiert sie bei jedem Öffnen der App.</span></p>
-      </article>
-      <article>
-        <span class="tag soon"><span lang="en">Coming next</span><span lang="de">Kommt als Nächstes</span></span>
-        <h3><span lang="en">A sleep plan for every trip</span><span lang="de">Ein Schlafplan für jede Rotation</span></h3>
-        <p><span lang="en">Early bird or night owl, commuting, layover rhythm: tell CrewDreams how you sleep, and it suggests when to sleep at home, on layover and on board.</span><span lang="de">Frühmensch oder Spättyp, Pendeln, Layover-Rhythmus: Sag CrewDreams, wie du schläfst, und es schlägt vor, wann du zu Hause, im Layover und an Bord schläfst.</span></p>
-      </article>
+      <article><span class="tag"><span lang="en">Rest calculator</span><span lang="de">Pausenrechner</span></span>
+        <p><span lang="en">Take-off and landing in UTC, and the rests for W, X and V appear with start, end and effective rest.</span><span lang="de">Take-off und Landung in UTC eingeben, und die Pausen für W, X und V erscheinen mit Start, Ende und effektiver Ruhezeit.</span></p></article>
+      <article><span class="tag"><span lang="en">Dark by design</span><span lang="de">Dunkel gestaltet</span></span>
+        <p><span lang="en">Easy on the eyes when you check your plan in the bunk or the hotel at night.</span><span lang="de">Angenehm für die Augen, wenn du nachts in der Koje oder im Hotel auf deinen Plan schaust.</span></p></article>
+      <article><span class="tag"><span lang="en">English and German</span><span lang="de">Englisch und Deutsch</span></span>
+        <p><span lang="en">The app follows your phone’s language.</span><span lang="de">Die App folgt der Sprache deines Handys.</span></p></article>
     </div>
-  </div>
-</section>
-
-<section id="rest">
-  <div class="wrap split">
-    <div>
-      <h2><span lang="en">First, middle or last rest.</span><span lang="de">Erste, mittlere oder letzte Pause.</span></h2>
-      <p class="intro">
-        <span lang="en">On a three-pilot crew the flight time is split roughly in thirds. All three are in the cockpit for about the first and last 15 minutes, and each rest ends with a wake-up and handover.</span>
-        <span lang="de">Bei einer Dreier-Crew wird die Flugzeit ungefähr gedrittelt. Etwa die ersten und letzten 15 Minuten sind alle drei im Cockpit, und jede Pause endet mit Wecken und Übergabe.</span>
-      </p>
-    </div>
-    <ul class="legend">
-      <li><i class="pos W">W</i><span><b lang="en">First rest</b><b lang="de">Erste Pause</b><span lang="en">About an hour longer than the others, because W stays awake until landing.</span><span lang="de">Etwa eine Stunde länger als die anderen, weil W danach bis zur Landung wach bleibt.</span></span></li>
-      <li><i class="pos X">X</i><span><b lang="en">Middle rest</b><b lang="de">Mittlere Pause</b><span lang="en">The middle third of the cruise.</span><span lang="de">Das mittlere Drittel des Reiseflugs.</span></span></li>
-      <li><i class="pos V">V</i><span><b lang="en">Last rest</b><b lang="de">Letzte Pause</b><span lang="en">Woken up a little earlier by default, to be back in the cockpit for approach and landing.</span><span lang="de">Standardmäßig etwas früher geweckt, um für Anflug und Landung zurück im Cockpit zu sein.</span></span></li>
-    </ul>
+    <p class="intro" style="margin-top:22px;font-size:15px">
+      <span lang="en">Suggestions, not medical advice. Always follow your airline’s rules.</span>
+      <span lang="de">Vorschläge, keine medizinische Beratung. Es gelten immer die Regeln deiner Airline.</span>
+    </p>
   </div>
 </section>
 
