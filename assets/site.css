@@ -1,10 +1,12 @@
+@font-face { font-family: "Sora"; src: url("sora-latin-700-normal.woff2") format("woff2"); font-weight: 700 800; font-display: swap; }
+@font-face { font-family: "Sora"; src: url("sora-latin-600-normal.woff2") format("woff2"); font-weight: 600; font-display: swap; }
 :root {
   --bg: #0d0f22; --bg2: #0a0c1b; --surface: #161a35; --surface2: #1e2344; --line: #2a2f55;
   --ink: #eceaff; --ink2: #c3c0e4; --muted: #9a98bd;
   --accent: #a596ff; --accent-ink: #120f2b; --accent-soft: #2b2860;
   --w: #a596ff; --x: #7fb2ff; --v: #ff9ccf;
   --body: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  --display: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --display: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   --wrap: 1100px;
   color-scheme: dark;
 }
@@ -44,7 +46,7 @@ html[data-lang="en"] [lang="de"], html[data-lang="de"] [lang="en"] { display: no
 .hero .grid { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
 @media (max-width: 900px) { .hero .grid { grid-template-columns: 1fr; gap: 40px; } .hero { padding-top: 40px; } }
 h1 { font: 800 clamp(42px, 6.4vw, 72px)/1.02 var(--display); letter-spacing: -.035em; margin: 0 0 20px; }
-h1 .soft { color: var(--ink2); font-weight: 300; }
+h1 .soft { color: var(--ink2); font-weight: 300; font-family: var(--body); }
 .lead { font-size: 19px; color: var(--ink2); max-width: 34em; margin: 0 0 28px; }
 .stores { display: flex; flex-wrap: wrap; gap: 10px; }
 .store { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 14px; background: var(--surface); color: var(--ink2); font-size: 15px; }
