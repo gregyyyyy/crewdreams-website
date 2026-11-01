@@ -45,8 +45,8 @@ html[data-lang="en"] [lang="de"], html[data-lang="de"] [lang="en"] { display: no
 .hero { position: relative; padding: 72px 0 40px; }
 .hero .grid { position: relative; display: grid; grid-template-columns: 1.05fr .95fr; gap: 56px; align-items: center; }
 @media (max-width: 900px) { .hero .grid { grid-template-columns: 1fr; gap: 40px; } .hero { padding-top: 40px; } }
-h1 { font: 800 clamp(42px, 6.4vw, 72px)/1.02 var(--display); letter-spacing: -.035em; margin: 0 0 20px; }
-h1 .soft { color: var(--ink2); font-weight: 300; font-family: var(--body); font-size: .8em; }
+h1 { font: 800 clamp(40px, 5.6vw, 64px)/1.04 var(--display); letter-spacing: -.035em; margin: 0 0 20px; }
+h1 .soft { display: block; margin-top: 14px; color: var(--ink2); font-weight: 300; font-family: var(--body); font-size: .48em; line-height: 1.25; letter-spacing: -.01em; }
 .lead { font-size: 19px; color: var(--ink2); max-width: 34em; margin: 0 0 28px; }
 .stores { display: flex; flex-wrap: wrap; gap: 10px; }
 .store { display: inline-flex; align-items: center; gap: 8px; padding: 11px 16px; border-radius: 14px; background: var(--surface); color: var(--ink2); font-size: 15px; }
