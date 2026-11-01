@@ -25,6 +25,11 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     setLang(root.getAttribute('data-lang'));
+    // The sleep plan in the phone scrolls through once and back: distance = what does not fit
+    var sc = document.querySelector('.scroller'), plan = sc && sc.querySelector('.plan');
+    function dist() { if (plan) plan.style.setProperty('--dist', Math.max(0, plan.scrollHeight - sc.clientHeight + 20) + 'px'); }
+    dist(); window.addEventListener('resize', dist);
+    document.addEventListener('click', function (e) { if (e.target.closest && e.target.closest('.lang button')) setTimeout(dist, 50); });
     // A few stars in the night sky (fixed positions so the page looks the same every time)
     var sky = document.querySelector('.sky');
     if (sky) {
