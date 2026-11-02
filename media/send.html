@@ -1,11 +1,12 @@
 <!doctype html><meta charset="utf-8"><title>send</title>
 <script>
-// Helper for uploading the store screenshots: sends the images to the window that opened this page.
+// Helper for uploading the store screenshots: sends the images to the window that opened or embeds this page.
 (async () => {
   const names = ['en-1-plan','en-2-trip','en-3-rest','en-4-prefs','en-5-welcome','de-1-plan','de-2-trip','de-3-rest','de-4-prefs','de-5-welcome'];
   const files = [];
   for (const n of names) { const r = await fetch('screens/' + n + '.png'); files.push({ name: n + '.png', buf: await r.arrayBuffer() }); }
-  if (window.opener) window.opener.postMessage({ crewdreamsShots: files }, 'https://appstoreconnect.apple.com');
+  const target = window.opener || (window.parent !== window ? window.parent : null);
+  if (target) target.postMessage({ crewdreamsShots: files }, 'https://appstoreconnect.apple.com');
   document.body.textContent = 'sent ' + files.length;
 })();
 </script>
