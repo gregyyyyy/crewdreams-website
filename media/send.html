@@ -2,7 +2,8 @@
 <script>
 // Helper for uploading the store screenshots: sends the images to the window that opened or embeds this page.
 (async () => {
-  const names = ['en-1-plan','en-2-trip','en-3-rest','en-4-prefs','en-5-welcome','de-1-plan','de-2-trip','de-3-rest','de-4-prefs','de-5-welcome'];
+  const q = new URLSearchParams(location.search).get('files');
+  const names = q ? q.split(',') : ['en-1-plan','en-2-trip','en-3-rest','en-4-prefs','en-5-welcome','de-1-plan','de-2-trip','de-3-rest','de-4-prefs','de-5-welcome'];
   const files = [];
   for (const n of names) { const r = await fetch('screens/' + n + '.png'); files.push({ name: n + '.png', buf: await r.arrayBuffer() }); }
   const target = window.opener || (window.parent !== window ? window.parent : null);
