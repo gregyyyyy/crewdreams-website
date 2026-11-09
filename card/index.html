@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>CrewDreams</title>
+<script>
+// Business-card QR code: iPhones open the App Store offer "3 months CrewDreams Pro free" (offer code CREWCARD,
+// new subscribers only). Not linked anywhere on the website.
+// To change or end the offer, only change OFFER here; the printed cards keep working.
+(function () {
+  var OFFER = 'https://apps.apple.com/redeem?ctx=offercodes&id=6829012360&code=CREWCARD';
+  var APP_STORE = OFFER || 'https://apps.apple.com/app/id6829012360';
+  var PLAY_STORE = '';    // once live on Google Play
+  var SITE = 'https://crewdreams.com/';
+  var ua = navigator.userAgent || '';
+  var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  var android = /Android/i.test(ua);
+  location.replace((ios && APP_STORE) || (android && PLAY_STORE) || SITE);
+})();
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://crewdreams.com/"></noscript>
+</head>
+<body style="margin:0;background:#0d0f22;color:#eceaff;font:17px -apple-system,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh">
+<p><a href="https://crewdreams.com/" style="color:#a596ff">CrewDreams</a></p>
+</body>
+</html>
