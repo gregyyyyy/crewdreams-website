@@ -222,25 +222,12 @@ footer .family b.cj { color: #F2B13C; }
 .contact p { margin: 6px 0 0; }
 .mail { font: 700 clamp(18px, 2.4vw, 22px)/1 var(--display); }
 
-/* Personal plan: your answers → your plan */
-.perso { display: grid; grid-template-columns: 1fr auto 1.15fr; gap: 18px; align-items: center; }
-@media (max-width: 860px) { .perso { grid-template-columns: 1fr; } .perso-arrow { transform: rotate(90deg); justify-self: center; } }
-.perso-box { background: var(--surface); border-radius: 24px; padding: 22px; }
-.perso-box.out { background: linear-gradient(160deg, var(--accent-soft), var(--surface)); box-shadow: 0 0 0 1px var(--line); }
-.perso-box small { display: block; color: var(--accent); font-weight: 700; font-size: 13px; letter-spacing: .04em; text-transform: uppercase; margin-bottom: 14px; }
-.perso-arrow { font-size: 34px; color: var(--accent); }
-.chips { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
-.chips li { background: var(--surface2); color: var(--ink); border-radius: 999px; padding: 6px 13px; font-size: 14.5px; }
-.chips .hi { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
-.chips .note-chip { background: transparent; box-shadow: inset 0 0 0 1px var(--line); color: var(--ink2); font-style: italic; }
-.pplan { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
-.pplan li { display: grid; grid-template-columns: 112px 1fr; gap: 12px; align-items: baseline; }
-@media (max-width: 480px) { .pplan li { grid-template-columns: 1fr; gap: 2px; } }
-.pplan b { font: 600 16px var(--display); font-variant-numeric: tabular-nums; color: var(--ink); }
-.pplan em { display: block; font-style: normal; font-weight: 400; color: var(--muted); font-size: 14px; }
-.prio { margin-top: 26px; }
-.prio .tag { display: inline-block; font-size: 13px; font-weight: 600; color: var(--accent); background: var(--accent-soft); padding: 3px 10px; border-radius: 999px; margin-bottom: 12px; }
-.prio ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
-@media (max-width: 860px) { .prio ul { grid-template-columns: 1fr; } }
-.prio li { background: var(--surface); border-radius: 18px; padding: 16px 18px; color: var(--ink2); font-size: 15px; }
-.prio li b { display: block; color: var(--ink); font: 700 17px/1.3 var(--display); margin-bottom: 4px; }
+/* Personal: four cards */
+.pgrid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media (max-width: 1000px) { .pgrid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .pgrid { grid-template-columns: 1fr; } }
+.pcard { background: var(--surface); border-radius: 22px; padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.pcard h3 { margin: 6px 0 0; font: 700 19px/1.25 var(--display); color: var(--ink); }
+.pcard p { margin: 0; color: var(--ink2); font-size: 15.5px; line-height: 1.5; }
+.pico { width: 44px; height: 44px; border-radius: 14px; display: grid; place-items: center; font-size: 21px;
+  background: var(--c); color: var(--accent-ink); }
