@@ -1,5 +1,7 @@
 // Language: German for German-language browsers, English for everyone else. The choice is remembered.
 (function () {
+  // The support section moved from crewdreams.com/#support to its own FAQ page
+  if (location.hash === '#support') { location.replace('faq.html'); return; }
   var root = document.documentElement;
   var saved = null;
   try { saved = localStorage.getItem('cd-lang'); } catch (e) { /* storage blocked */ }
