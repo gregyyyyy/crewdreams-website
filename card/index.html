@@ -2,27 +2,70 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="robots" content="noindex">
-<title>CrewDreams</title>
+<meta name="theme-color" content="#0D0F22">
+<title>CrewDreams – 3 months free</title>
+<meta property="og:title" content="CrewDreams – 3 months free">
+<meta property="og:image" content="https://crewdreams.com/assets/og.png">
+<!-- Business-card QR code (crewdreams.com/card). Not linked anywhere on the website.
+     Same page for all three crew apps (CrewLoops, CrewJournal, CrewDreams): first this "3 months free" screen, then the store.
+     OFFER: App Store offer code link (CREWCARD); empty = no code, the button opens the App Store page.
+     To change or end the offer, only change OFFER here; the printed cards keep working. -->
+<style>
+@font-face{font-family:Disp;font-weight:600;src:url(/assets/sora-latin-600-normal.woff2) format('woff2')}@font-face{font-family:Disp;font-weight:700;src:url(/assets/sora-latin-700-normal.woff2) format('woff2')}
+:root{--bg:#0D0F22;--ink:#ECEAFF;--muted:#B7B5D6;--accent:#A596FF}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif}
+main{min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:32px 20px calc(32px + env(safe-area-inset-bottom));text-align:center;
+  background:radial-gradient(60% 45% at 50% 30%, rgba(53,44,134,.75), transparent)}
+.icon{width:112px;height:112px;border-radius:25px;box-shadow:0 12px 40px rgba(0,0,0,.45)}
+.eyebrow{margin:28px 0 6px;font-size:13px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+h1{margin:0;font-family:Disp,system-ui,sans-serif;font-size:40px;line-height:1.05;font-weight:700;letter-spacing:-.8px;}
+.lead{margin:14px auto 0;max-width:340px;font-size:17px;line-height:1.45;color:var(--muted)}
+ul{list-style:none;padding:0;margin:26px auto 0;max-width:340px;text-align:left;display:grid;gap:12px}
+li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;line-height:1.4}
+li b{flex:none;width:22px;height:22px;border-radius:50%;background:var(--accent);color:var(--bg);font-size:13px;display:grid;place-items:center;margin-top:1px}
+.btn{display:block;width:100%;max-width:340px;margin:32px auto 0;padding:17px 20px;border-radius:16px;background:var(--accent);color:#120F2B;font-size:17px;font-weight:700;text-decoration:none}
+.small{margin:16px auto 0;max-width:340px;font-size:12.5px;line-height:1.45;color:var(--muted)}
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="/assets/icon-512.png" alt="CrewDreams">
+  <p class="eyebrow" id="eyebrow">Welcome to CrewDreams</p>
+  <h1 id="title">3 months free</h1>
+  <p class="lead" id="lead"></p>
+  <ul id="list"></ul>
+  <a class="btn" id="go" href="https://crewdreams.com/"></a>
+  <p class="small" id="note"></p>
+</main>
 <script>
-// Business-card QR code: iPhones open the App Store offer "3 months CrewDreams Pro free" (offer code CREWCARD,
-// new subscribers only). Not linked anywhere on the website.
-// To change or end the offer, only change OFFER here; the printed cards keep working.
 (function () {
-  var OFFER = 'https://apps.apple.com/redeem?ctx=offercodes&id=6829012360&code=CREWCARD';
-  var APP_STORE = OFFER || 'https://apps.apple.com/app/id6829012360';
-  var PLAY_STORE = '';    // once live on Google Play
+  var OFFER = "https://apps.apple.com/redeem?ctx=offercodes&id=6829012360&code=CREWCARD";
+  var APP_STORE = "https://apps.apple.com/app/id6829012360";
+  var PLAY_STORE = "";    // once live on Google Play
   var SITE = 'https://crewdreams.com/';
+  var TEXT = {"en": {"lead": "CrewDreams Pro is yours for 3 months: a sleep plan for every trip.", "b": ["Built from your roster", "Sleep and inflight rest, planned for you", "Private, no account needed"], "cta": "Activate 3 months free", "note": "Apple then shows the offer, just confirm it. For new subscribers. After 3 months the subscription continues unless you cancel, anytime in your Apple ID settings."}, "de": {"lead": "CrewDreams Pro gehört 3 Monate dir: ein Schlafplan für jede Rotation.", "b": ["Aus deinem Dienstplan erstellt", "Schlaf und Inflight-Rest für dich geplant", "Privat, ohne Konto"], "cta": "3 Monate gratis aktivieren", "note": "Apple zeigt dann das Angebot, einfach bestätigen. Für neue Abonnent:innen. Nach 3 Monaten läuft das Abo weiter, außer du kündigst – jederzeit in den Einstellungen deiner Apple-ID."}};
   var ua = navigator.userAgent || '';
   var ios = /iPhone|iPad|iPod/i.test(ua) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
   var android = /Android/i.test(ua);
-  location.replace((ios && APP_STORE) || (android && PLAY_STORE) || SITE);
+  var de = /^de\b/i.test(navigator.language || '');
+  var t = TEXT[de ? 'de' : 'en'];
+  if (de) { document.documentElement.lang = 'de'; document.title = 'CrewDreams – 3 Monate gratis';
+    document.getElementById('eyebrow').textContent = 'Willkommen bei CrewDreams'; document.getElementById('title').textContent = '3 Monate gratis'; }
+  document.getElementById('lead').textContent = t.lead;
+  document.getElementById('list').innerHTML = t.b.map(function (x) { return '<li><b>✓</b><span></span></li>'; }).join('');
+  [].forEach.call(document.querySelectorAll('#list span'), function (s, i) { s.textContent = t.b[i]; });
+  var go = document.getElementById('go'), note = document.getElementById('note');
+  go.textContent = t.cta; note.textContent = t.note;
+  if (android) {
+    go.href = PLAY_STORE || SITE;
+    if (!PLAY_STORE) { go.textContent = de ? 'Zur Website' : 'Visit the website'; note.textContent = de ? 'CrewDreams kommt bald auf Google Play.' : 'CrewDreams is coming to Google Play soon.'; }
+  } else {
+    go.href = OFFER || APP_STORE;
+  }
 })();
 </script>
-<noscript><meta http-equiv="refresh" content="0; url=https://crewdreams.com/"></noscript>
-</head>
-<body style="margin:0;background:#0d0f22;color:#eceaff;font:17px -apple-system,system-ui,sans-serif;display:grid;place-items:center;min-height:100vh">
-<p><a href="https://crewdreams.com/" style="color:#a596ff">CrewDreams</a></p>
 </body>
 </html>
